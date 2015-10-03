@@ -1,69 +1,67 @@
 Package.describe({
   name: 'meta:susy',
   summary: 'Powerful grids for the web.',
-  version: '2.2.0',
+  version: '2.3.0',
   git: 'https://github.com/aaronagray/meteor-susy'
 });
 
 Package.onUse(function(api) {
   api.versionsFrom('1.0');
-  api.use('fourseven:scss@3.2.0');
+  api.use('fourseven:scss@3.3.3_3');
   api.addFiles([
 
     // Susy API
-    "_susy.scss",
-    "susy/language/_susy.scss",
-    "susy/language/susy/_background.scss",
-    "susy/language/susy/_bleed.scss",
-    "susy/language/susy/_box-sizing.scss",
-    "susy/language/susy/_breakpoint-plugin.scss",
-    "susy/language/susy/_container.scss",
-    "susy/language/susy/_context.scss",
-    "susy/language/susy/_gallery.scss",
-    "susy/language/susy/_grids.scss",
-    "susy/language/susy/_gutters.scss",
-    "susy/language/susy/_isolate.scss",
-    "susy/language/susy/_margins.scss",
-    "susy/language/susy/_padding.scss",
-    "susy/language/susy/_rows.scss",
-    "susy/language/susy/_settings.scss",
-    "susy/language/susy/_span.scss",
-    "susy/language/susy/_validation.scss",
+    "imports/_susy.scss",
+    "imports/susy/language/_susy.scss",
+    "imports/susy/language/susy/_background.scss",
+    "imports/susy/language/susy/_bleed.scss",
+    "imports/susy/language/susy/_box-sizing.scss",
+    "imports/susy/language/susy/_breakpoint-plugin.scss",
+    "imports/susy/language/susy/_container.scss",
+    "imports/susy/language/susy/_context.scss",
+    "imports/susy/language/susy/_gallery.scss",
+    "imports/susy/language/susy/_grids.scss",
+    "imports/susy/language/susy/_gutters.scss",
+    "imports/susy/language/susy/_isolate.scss",
+    "imports/susy/language/susy/_margins.scss",
+    "imports/susy/language/susy/_padding.scss",
+    "imports/susy/language/susy/_rows.scss",
+    "imports/susy/language/susy/_settings.scss",
+    "imports/susy/language/susy/_span.scss",
+    "imports/susy/language/susy/_validation.scss",
 
     // Susy Math
-    "susy/_su.scss",
-    "susy/su/_grid.scss",
-    "susy/su/_settings.scss",
-    "susy/su/_utilities.scss",
-    "susy/su/_validation.scss",
+    "imports/susy/_su.scss",
+    "imports/susy/su/_grid.scss",
+    "imports/susy/su/_settings.scss",
+    "imports/susy/su/_utilities.scss",
+    "imports/susy/su/_validation.scss",
 
     // Susy Output
     // - Float
-    "susy/output/_float.scss",
-    "susy/output/float/_container.scss",
-    "susy/output/float/_end.scss",
-    "susy/output/float/_isolate.scss",
-    "susy/output/float/_span.scss",
+    "imports/susy/output/_float.scss",
+    "imports/susy/output/float/_container.scss",
+    "imports/susy/output/float/_end.scss",
+    "imports/susy/output/float/_isolate.scss",
+    "imports/susy/output/float/_span.scss",
     // - Shared
-    "susy/output/_shared.scss",
-    "susy/output/shared/_background.scss",
-    "susy/output/shared/_container.scss",
-    "susy/output/shared/_direction.scss",
-    "susy/output/shared/_inspect.scss",
-    "susy/output/shared/_margins.scss",
-    "susy/output/shared/_output.scss",
-    "susy/output/shared/_padding.scss",
+    "imports/susy/output/_shared.scss",
+    "imports/susy/output/shared/_background.scss",
+    "imports/susy/output/shared/_container.scss",
+    "imports/susy/output/shared/_direction.scss",
+    "imports/susy/output/shared/_inspect.scss",
+    "imports/susy/output/shared/_margins.scss",
+    "imports/susy/output/shared/_output.scss",
+    "imports/susy/output/shared/_padding.scss",
     // - Support
-    "susy/output/_support.scss",
-    "susy/output/support/_background.scss",
-    "susy/output/support/_box-sizing.scss",
-    "susy/output/support/_clearfix.scss",
-    "susy/output/support/_prefix.scss",
-    "susy/output/support/_rem.scss",
-    "susy/output/support/_support.scss"
-    ], 'server', {
-    isAsset: true
-  });
+    "imports/susy/output/_support.scss",
+    "imports/susy/output/support/_background.scss",
+    "imports/susy/output/support/_box-sizing.scss",
+    "imports/susy/output/support/_clearfix.scss",
+    "imports/susy/output/support/_prefix.scss",
+    "imports/susy/output/support/_rem.scss",
+    "imports/susy/output/support/_support.scss"
+    ], ['server', 'client'],  {isImport: true});
 });
 
 Package.onTest(function(api) {
